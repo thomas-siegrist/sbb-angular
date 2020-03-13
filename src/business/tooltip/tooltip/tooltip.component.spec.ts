@@ -6,7 +6,6 @@ import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testin
 import { By } from '@angular/platform-browser';
 import { SBB_TOOLTIP_SCROLL_STRATEGY_FACTORY_PROVIDER } from '@sbb-esta/angular-core/base';
 import { IconCollectionModule } from '@sbb-esta/angular-icons';
-import { configureTestSuite } from 'ng-bullet';
 
 import { TooltipModule } from '../tooltip.module';
 
@@ -42,13 +41,13 @@ describe('TooltipComponent', () => {
   let component: TooltipComponent;
   let fixture: ComponentFixture<TooltipComponent>;
 
-  configureTestSuite(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [IconCollectionModule, CommonModule, PortalModule, OverlayModule],
       providers: [SBB_TOOLTIP_SCROLL_STRATEGY_FACTORY_PROVIDER],
       declarations: [TooltipComponent]
-    });
-  });
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TooltipComponent);
@@ -69,13 +68,13 @@ describe('Tooltip using hover configuration with default delay', () => {
   let component: TooltipHoverTrueTestComponent;
   let fixture: ComponentFixture<TooltipHoverTrueTestComponent>;
 
-  configureTestSuite(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [IconCollectionModule, CommonModule, PortalModule, OverlayModule, TooltipModule],
       providers: [SBB_TOOLTIP_SCROLL_STRATEGY_FACTORY_PROVIDER],
       declarations: [TooltipHoverTrueTestComponent]
-    });
-  });
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TooltipHoverTrueTestComponent);
@@ -110,13 +109,13 @@ describe('Tooltip using hover configuration and delay settings for open and clos
   let component: TooltipHoverTrueAndDelaySettingsTestComponent;
   let fixture: ComponentFixture<TooltipHoverTrueAndDelaySettingsTestComponent>;
 
-  configureTestSuite(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [IconCollectionModule, CommonModule, PortalModule, OverlayModule, TooltipModule],
       providers: [SBB_TOOLTIP_SCROLL_STRATEGY_FACTORY_PROVIDER],
       declarations: [TooltipHoverTrueAndDelaySettingsTestComponent]
-    });
-  });
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TooltipHoverTrueAndDelaySettingsTestComponent);
