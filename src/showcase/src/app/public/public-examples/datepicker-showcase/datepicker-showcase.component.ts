@@ -5,7 +5,7 @@ import { DateAdapter } from '@sbb-esta/angular-core/datetime';
 @Component({
   selector: 'sbb-datepicker-showcase',
   templateUrl: './datepicker-showcase.component.html',
-  styleUrls: ['./datepicker-showcase.component.scss']
+  styleUrls: ['./datepicker-showcase.component.css']
 })
 export class DatepickerShowcaseComponent {
   today = new Date();
