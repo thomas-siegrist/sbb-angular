@@ -71,7 +71,7 @@ export class EsriLoaderService {
 
     const trustedServers =
       this._config && this._config.trustedServers ? this._config.trustedServers : [];
-    esriConfig.request.trustedServers.push(
+    esriConfig.request.trustedServers!.push(
       ...EsriConfigConsts.trustedServers.concat(trustedServers)
     );
 
@@ -81,8 +81,8 @@ export class EsriLoaderService {
         ? originsWithCredentials.concat(this._config.originsWithCredentialsRequired)
         : originsWithCredentials;
 
-    esriConfig.request.interceptors.push({
-      before: params => {
+    esriConfig.request.interceptors!.push({
+      before: (params: any) => {
         if (originsWithCredentialsRequired.some(o => params.url.includes(o))) {
           params.requestOptions.withCredentials = true;
         }
