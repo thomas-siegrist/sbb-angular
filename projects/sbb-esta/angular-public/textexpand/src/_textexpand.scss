@@ -1,3 +1,4 @@
+@import '../../../angular-core/styles/common/variants';
 @import '../../../angular-core/styles/common/variables';
 @import '../../../angular-core/styles/common/colors';
 @import '../../../angular-core/styles/common/functions';
@@ -5,17 +6,22 @@
 @import '../../../angular-core/styles/common/button';
 
 @mixin textexpand {
-  color: $sbbColorMetal;
-  letter-spacing: 0;
-  line-height: 1.538;
-  font-size: pxToRem(13);
+  @if $sbbBusiness {
+    color: $sbbColorBlack;
+    font-size: pxToRem(15);
+  } @else {
+    color: $sbbColorMetal;
+    letter-spacing: 0;
+    line-height: 1.538;
+    font-size: pxToRem(13);
 
-  @include mq($from: desktop4k) {
-    font-size: pxToRem(13 * $scalingFactor4k);
-  }
+    @include mq($from: desktop4k) {
+      font-size: pxToRem(13 * $scalingFactor4k);
+    }
 
-  @include mq($from: desktop5k) {
-    font-size: pxToRem(13 * $scalingFactor5k);
+    @include mq($from: desktop5k) {
+      font-size: pxToRem(13 * $scalingFactor5k);
+    }
   }
 }
 
@@ -27,9 +33,11 @@
   line-height: inherit;
   font-size: inherit;
 
-  &:focus,
-  &:hover {
-    color: $sbbColorRed;
+  @include publicOnly() {
+    &:focus,
+    &:hover {
+      color: $sbbColorRed;
+    }
   }
 
   &-label {

@@ -19,6 +19,7 @@ import { SelectModule } from '@sbb-esta/angular-business/select';
 import { TableModule } from '@sbb-esta/angular-business/table';
 import { TabsModule } from '@sbb-esta/angular-business/tabs';
 import { TextareaModule } from '@sbb-esta/angular-business/textarea';
+import { TextexpandModule } from '@sbb-esta/angular-business/textexpand';
 import { TooltipModule } from '@sbb-esta/angular-business/tooltip';
 import { UserMenuModule } from '@sbb-esta/angular-business/usermenu';
 import { IconCollectionModule } from '@sbb-esta/angular-icons';
@@ -61,6 +62,7 @@ import { TabsShowcaseComponent } from './tabs-showcase/tabs-showcase.component';
 import { TextareaFormsShowcaseComponent } from './textarea-forms-showcase/textarea-forms-showcase.component';
 import { TextareaNativeShowcaseComponent } from './textarea-native-showcase/textarea-native-showcase.component';
 import { TextareaReactiveFormsWithSbbFieldShowcaseComponent } from './textarea-reactive-forms-with-sbbfield-showcase/textarea-reactive-forms-with-sbb-field-showcase.component';
+import { TextexpandShowcaseComponent } from './textexpand-showcase/textexpand-showcase.component';
 import { TooltipShowcaseComponent } from './tooltip-showcase/tooltip-showcase.component';
 import { UsermenuShowcaseComponent } from './usermenu-showcase/usermenu-showcase.component';
 
@@ -104,7 +106,8 @@ const exampleComponents = [
   AutocompleteReactiveFormsShowcaseComponent,
   TextareaFormsShowcaseComponent,
   TextareaReactiveFormsWithSbbFieldShowcaseComponent,
-  TextareaNativeShowcaseComponent
+  TextareaNativeShowcaseComponent,
+  TextexpandShowcaseComponent
 ];
 
 @NgModule({
@@ -138,7 +141,8 @@ const exampleComponents = [
     SelectModule,
     OptionModule,
     AutocompleteModule,
-    TextareaModule
+    TextareaModule,
+    TextexpandModule
   ]
 })
 export class BusinessExamplesModule {}

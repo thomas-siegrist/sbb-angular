@@ -32,6 +32,7 @@ import { TabsShowcaseComponent } from '../business-examples/tabs-showcase/tabs-s
 import { TextareaFormsShowcaseComponent } from '../business-examples/textarea-forms-showcase/textarea-forms-showcase.component';
 import { TextareaNativeShowcaseComponent } from '../business-examples/textarea-native-showcase/textarea-native-showcase.component';
 import { TextareaReactiveFormsWithSbbFieldShowcaseComponent } from '../business-examples/textarea-reactive-forms-with-sbbfield-showcase/textarea-reactive-forms-with-sbb-field-showcase.component';
+import { TextexpandShowcaseComponent } from '../business-examples/textexpand-showcase/textexpand-showcase.component';
 import { TooltipShowcaseComponent } from '../business-examples/tooltip-showcase/tooltip-showcase.component';
 import { UsermenuShowcaseComponent } from '../business-examples/usermenu-showcase/usermenu-showcase.component';
 
@@ -51,6 +52,7 @@ export class BusinessComponent implements ExampleProvider {
     'radio-button': 'Radiobutton',
     select: 'Select',
     textarea: 'Textarea',
+    textexpand: 'Textexpand',
     'time-input': 'Time Input'
   };
   navigationComponents = {
@@ -139,6 +141,9 @@ export class BusinessComponent implements ExampleProvider {
         TextareaReactiveFormsWithSbbFieldShowcaseComponent
       ),
       'textarea-native': new ComponentPortal(TextareaNativeShowcaseComponent)
+    },
+    textexpand: {
+      textexpand: new ComponentPortal(TextexpandShowcaseComponent)
     }
   };
 

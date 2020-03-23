@@ -20,6 +20,7 @@ function public2business(_options) {
             'select',
             'tabs',
             'textarea',
+            'textexpand',
             'time-input',
             'usermenu'
         ].forEach(m => copyAndAdaptPublicModule(tree, m));
