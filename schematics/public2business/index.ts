@@ -10,6 +10,7 @@ export function public2business(_options: any): Rule {
       'datepicker',
       'dropdown',
       'field',
+      'file-selector',
       'input',
       'option',
       'pagination',

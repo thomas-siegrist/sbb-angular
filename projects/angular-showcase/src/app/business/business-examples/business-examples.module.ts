@@ -9,6 +9,7 @@ import { ChipModule } from '@sbb-esta/angular-business/chip';
 import { ContextmenuModule } from '@sbb-esta/angular-business/contextmenu';
 import { DialogModule } from '@sbb-esta/angular-business/dialog';
 import { FieldModule } from '@sbb-esta/angular-business/field';
+import { FileSelectorModule } from '@sbb-esta/angular-business/file-selector';
 import { HeaderModule } from '@sbb-esta/angular-business/header';
 import { NotificationsModule } from '@sbb-esta/angular-business/notification';
 import { OptionModule } from '@sbb-esta/angular-business/option';
@@ -39,6 +40,7 @@ import {
   DialogShowcaseExampleComponent,
   DialogShowcaseExampleContentComponent
 } from './dialog-showcase/dialog-showcase.component';
+import { FileSelectorShowcaseComponent } from './file-selector-showcase/file-selector-showcase.component';
 import { ClosableNotificationComponent } from './notification-showcase/closable-notification/closable-notification.component';
 import { CustomIconNotificationComponent } from './notification-showcase/custom-icon-notification/custom-icon-notification.component';
 import { JumpmarkNotificationComponent } from './notification-showcase/jumpmark-notification/jumpmark-notification.component';
@@ -104,7 +106,8 @@ const exampleComponents = [
   AutocompleteReactiveFormsShowcaseComponent,
   TextareaFormsShowcaseComponent,
   TextareaReactiveFormsWithSbbFieldShowcaseComponent,
-  TextareaNativeShowcaseComponent
+  TextareaNativeShowcaseComponent,
+  FileSelectorShowcaseComponent
 ];
 
 @NgModule({
@@ -138,7 +141,8 @@ const exampleComponents = [
     SelectModule,
     OptionModule,
     AutocompleteModule,
-    TextareaModule
+    TextareaModule,
+    FileSelectorModule
   ]
 })
 export class BusinessExamplesModule {}

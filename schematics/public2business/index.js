@@ -13,6 +13,7 @@ function public2business(_options) {
             'datepicker',
             'dropdown',
             'field',
+            'file-selector',
             'input',
             'option',
             'pagination',

@@ -11,6 +11,7 @@ import { DisabledChipInputComponent } from '../business-examples/chip-showcase/d
 import { FormsChipInputComponent } from '../business-examples/chip-showcase/forms-chip-input/forms-chip-input.component';
 import { ReactiveFormsChipInputComponent } from '../business-examples/chip-showcase/reactive-forms-chip-input/reactive-forms-chip-input.component';
 import { DialogShowcaseComponent } from '../business-examples/dialog-showcase/dialog-showcase.component';
+import { FileSelectorShowcaseComponent } from '../business-examples/file-selector-showcase/file-selector-showcase.component';
 import { ClosableNotificationComponent } from '../business-examples/notification-showcase/closable-notification/closable-notification.component';
 import { CustomIconNotificationComponent } from '../business-examples/notification-showcase/custom-icon-notification/custom-icon-notification.component';
 import { JumpmarkNotificationComponent } from '../business-examples/notification-showcase/jumpmark-notification/jumpmark-notification.component';
@@ -48,6 +49,7 @@ export class BusinessComponent implements ExampleProvider {
     chip: 'Chip Input',
     datepicker: 'Datepicker',
     field: 'Field',
+    'file-selector': 'File Selector',
     'radio-button': 'Radiobutton',
     select: 'Select',
     textarea: 'Textarea',
@@ -139,6 +141,9 @@ export class BusinessComponent implements ExampleProvider {
         TextareaReactiveFormsWithSbbFieldShowcaseComponent
       ),
       'textarea-native': new ComponentPortal(TextareaNativeShowcaseComponent)
+    },
+    'file-selector': {
+      'file-selector-showcase': new ComponentPortal<any>(FileSelectorShowcaseComponent)
     }
   };
 
