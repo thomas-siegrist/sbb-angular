@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 
 import { ExampleProvider } from '../../shared/example-provider';
 import { DialogShowcaseComponent } from '../business-examples/dialog-showcase/dialog-showcase.component';
+import { LinksComponent } from '../business-examples/links-showcase/links.component';
 import { ClosableNotificationComponent } from '../business-examples/notification-showcase/closable-notification/closable-notification.component';
 import { CustomIconNotificationComponent } from '../business-examples/notification-showcase/custom-icon-notification/custom-icon-notification.component';
 import { JumpmarkNotificationComponent } from '../business-examples/notification-showcase/jumpmark-notification/jumpmark-notification.component';
@@ -49,7 +50,8 @@ export class BusinessComponent implements ExampleProvider {
   };
   buttonAndIndicatorComponents = {
     button: 'Button',
-    contextmenu: 'Contextmenu'
+    contextmenu: 'Contextmenu',
+    links: 'Links'
   };
   popupsAndModals = {
     tooltip: 'Tooltip',
@@ -73,6 +75,9 @@ export class BusinessComponent implements ExampleProvider {
     },
     dialog: {
       'dialog-showcase': new ComponentPortal(DialogShowcaseComponent)
+    },
+    links: {
+      links: new ComponentPortal(LinksComponent)
     },
     pagination: {
       'pagination-showcase': new ComponentPortal(PaginationShowcaseComponent)

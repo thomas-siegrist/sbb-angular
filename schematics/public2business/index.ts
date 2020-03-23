@@ -11,6 +11,7 @@ export function public2business(_options: any): Rule {
       'dropdown',
       'field',
       'input',
+      'links',
       'option',
       'pagination',
       'radio-button',

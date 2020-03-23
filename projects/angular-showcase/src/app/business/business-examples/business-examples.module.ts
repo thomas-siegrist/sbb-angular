@@ -8,6 +8,7 @@ import { ContextmenuModule } from '@sbb-esta/angular-business/contextmenu';
 import { DialogModule } from '@sbb-esta/angular-business/dialog';
 import { FieldModule } from '@sbb-esta/angular-business/field';
 import { HeaderModule } from '@sbb-esta/angular-business/header';
+import { LinksModule } from '@sbb-esta/angular-business/links';
 import { NotificationsModule } from '@sbb-esta/angular-business/notification';
 import { PaginationModule } from '@sbb-esta/angular-business/pagination';
 import { ProcessflowModule } from '@sbb-esta/angular-business/processflow';
@@ -26,6 +27,7 @@ import {
   DialogShowcaseExampleComponent,
   DialogShowcaseExampleContentComponent
 } from './dialog-showcase/dialog-showcase.component';
+import { LinksComponent } from './links-showcase/links.component';
 import { ClosableNotificationComponent } from './notification-showcase/closable-notification/closable-notification.component';
 import { CustomIconNotificationComponent } from './notification-showcase/custom-icon-notification/custom-icon-notification.component';
 import { JumpmarkNotificationComponent } from './notification-showcase/jumpmark-notification/jumpmark-notification.component';
@@ -64,7 +66,8 @@ const exampleComponents = [
   SimpleTableComponent,
   GroupedRowsTableComponent,
   SortableTableComponent,
-  GroupedColumnsTableComponent
+  GroupedColumnsTableComponent,
+  LinksComponent
 ];
 
 @NgModule({
@@ -91,7 +94,8 @@ const exampleComponents = [
     PaginationModule,
     NotificationsModule,
     UserMenuModule,
-    TableModule
+    TableModule,
+    LinksModule
   ]
 })
 export class BusinessExamplesModule {}
