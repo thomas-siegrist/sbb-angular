@@ -109,7 +109,6 @@ const exampleComponents = [
 
 @NgModule({
   declarations: exampleComponents,
-  entryComponents: exampleComponents,
   exports: exampleComponents,
   imports: [
     CommonModule,
