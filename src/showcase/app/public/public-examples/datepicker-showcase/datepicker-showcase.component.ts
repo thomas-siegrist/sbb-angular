@@ -48,15 +48,15 @@ export class DatepickerShowcaseComponent {
     console.log('OPENED');
   }
 
-  dateChangeEvent($event) {
+  dateChangeEvent($event: any) {
     console.log('DATE_CHANGED', $event);
   }
 
-  dateInputEvent($event) {
+  dateInputEvent($event: any) {
     console.log('DATE_INPUT', $event);
   }
 
-  filterDates = (date: Date): boolean => {
-    return date.getDate() === 1;
+  filterDates = (date: Date | null): boolean => {
+    return !!date && date.getDate() === 1;
   };
 }

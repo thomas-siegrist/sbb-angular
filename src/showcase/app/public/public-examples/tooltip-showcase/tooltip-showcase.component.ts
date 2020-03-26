@@ -10,11 +10,11 @@ export class TooltipShowcaseComponent {
   hoverCloseDelay = 0;
   hoverOpenDelay = 0;
 
-  onOpen($event) {
+  onOpen($event: any) {
     console.log('opened', $event);
   }
 
-  onClose($event) {
+  onClose($event: any) {
     console.log('closed', $event);
   }
 }
